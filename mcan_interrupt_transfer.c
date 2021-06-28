@@ -131,27 +131,10 @@ int main(void)
     BOARD_BootClockPLL180M();
     BOARD_InitDebugConsole();
     SysTick->CTRL = 0;//adfdsf    
-    do
-    {
-        PRINTF("Please select local node as A or B:\r\n");
-        PRINTF("Note: Node B should start first.\r\n");
-        PRINTF("Node:");
-        node_type = GETCHAR();
-        PRINTF("%c", node_type);
-        PRINTF("\r\n");
-    } while ((node_type != 'A') && (node_type != 'B') && (node_type != 'a') && (node_type != 'b'));
 
     /* Select mailbox ID. */
-    if ((node_type == 'A') || (node_type == 'a'))
-    {
         txIdentifier = 0x321U;
         rxIdentifier = 0x123U;
-    }
-    else
-    {
-        txIdentifier = 0x123U;
-        rxIdentifier = 0x321U;
-    }
 
     MCAN_GetDefaultConfig(&mcanConfig);
 #if (defined(USE_CANFD) && USE_CANFD)
@@ -461,6 +444,14 @@ int main(void)
     stop_time = SysTick->VAL;
     end_time[22] = start_time - stop_time;
 
+    
+    uint8_t *pdata, value_data;
+    value_data= 0xA;
+    pdata = &value_data;
+    pTxFrame.id = 0x5a;
+    pTxFrame.rtr = 0;
+    pTxFrame.data = pdata;
+    pTxFrame.size = 1;
     SysTick->CTRL = 0;//adfdsf
     SysTick->LOAD = 0xFFFFFFFF;
     SysTick->VAL = 0;
