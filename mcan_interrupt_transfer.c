@@ -226,223 +226,247 @@ int main(void)
     {
         PRINTF("Start to Wait data from Node A\r\n\r\n");
     }
+//    SysTick->CTRL = 0;//adfdsf
+//    SysTick->LOAD = 0xFFFFFFFF;
+//    SysTick->VAL = 0;
+//    SysTick->CTRL= 0x5;
+//    while(SysTick->VAL != 0);
+//    start_time = SysTick->VAL;    
+//    MCAN_GetDefaultConfig(&mcanConfig);
+//    stop_time = SysTick->VAL;
+//    end_time[0] = start_time - stop_time;
+//
+//    SysTick->CTRL = 0;//adfdsf
+//    SysTick->LOAD = 0xFFFFFFFF;
+//    SysTick->VAL = 0;
+//        SysTick->CTRL= 0x5;
+//    while(SysTick->VAL != 0);
+//    start_time = SysTick->VAL;    
+//    MCAN_FDCalculateImprovedTimingValues(mcanConfig.baudRateA, mcanConfig.baudRateD, MCAN_CLK_FREQ, &timing_config);
+//    stop_time = SysTick->VAL;
+//    end_time[1] = start_time - stop_time;
+//
+//    SysTick->CTRL = 0;//adfdsf
+//    SysTick->LOAD = 0xFFFFFFFF;
+//    SysTick->VAL = 0;
+//        SysTick->CTRL= 0x5;
+//    while(SysTick->VAL != 0);
+//    start_time = SysTick->VAL;    
+//    MCAN_Init(EXAMPLE_MCAN, &mcanConfig, MCAN_CLK_FREQ);
+//    stop_time = SysTick->VAL;
+//    end_time[2] = start_time - stop_time;
+//
+//    SysTick->CTRL = 0;//adfdsf
+//    SysTick->LOAD = 0xFFFFFFFF;
+//    SysTick->VAL = 0;
+//        SysTick->CTRL= 0x5;
+//    while(SysTick->VAL != 0);
+//    start_time = SysTick->VAL;    
+//    MCAN_TransferCreateHandle(EXAMPLE_MCAN, &mcanHandle, mcan_callback, NULL);
+//
+//    stop_time = SysTick->VAL;
+//    end_time[3] = start_time - stop_time;
+//
+//    SysTick->CTRL = 0;//adfdsf
+//    SysTick->LOAD = 0xFFFFFFFF;
+//    SysTick->VAL = 0;
+//        SysTick->CTRL= 0x5;
+//    while(SysTick->VAL != 0);
+//    start_time = SysTick->VAL;
+//    MCAN_SetMsgRAMBase(EXAMPLE_MCAN, MSG_RAM_BASE);
+//    stop_time = SysTick->VAL;
+//    end_time[4] = start_time - stop_time;
+//
+//    SysTick->CTRL = 0;//adfdsf
+//    SysTick->LOAD = 0xFFFFFFFF;
+//    SysTick->VAL = 0;
+//        SysTick->CTRL= 0x5;
+//    while(SysTick->VAL != 0);
+//    start_time = SysTick->VAL;    
+//    MCAN_SetFilterConfig(EXAMPLE_MCAN, &rxFilter);
+//    stop_time = SysTick->VAL;
+//    end_time[5] = start_time - stop_time;
+//
+//    SysTick->CTRL = 0;//adfdsf
+//    SysTick->LOAD = 0xFFFFFFFF;
+//    SysTick->VAL = 0;
+//        SysTick->CTRL= 0x5;
+//    while(SysTick->VAL != 0);
+//    start_time = SysTick->VAL;    
+//    MCAN_SetFilterConfig(EXAMPLE_MCAN, &rxFilter);
+//    stop_time = SysTick->VAL;
+//    end_time[6] = start_time - stop_time;
+//
+//    SysTick->CTRL = 0;//adfdsf
+//    SysTick->LOAD = 0xFFFFFFFF;
+//    SysTick->VAL = 0;
+//        SysTick->CTRL= 0x5;
+//    while(SysTick->VAL != 0);
+//    start_time = SysTick->VAL;    
+//    MCAN_SetSTDFilterElement(EXAMPLE_MCAN, &rxFilter, &stdFilter, 0);
+//    stop_time = SysTick->VAL;
+//    end_time[7] = start_time - stop_time;
+//
+//    SysTick->CTRL = 0;//adfdsf
+//    SysTick->LOAD = 0xFFFFFFFF;
+//    SysTick->VAL = 0;
+//        SysTick->CTRL= 0x5;
+//    while(SysTick->VAL != 0);
+//    start_time = SysTick->VAL;    
+//    MCAN_SetRxFifo0Config(EXAMPLE_MCAN, &rxFifo0);
+//    stop_time = SysTick->VAL;
+//    end_time[8] = start_time - stop_time;
+//
+//    SysTick->CTRL = 0;//adfdsf
+//    SysTick->LOAD = 0xFFFFFFFF;
+//    SysTick->VAL = 0;
+//        SysTick->CTRL= 0x5;
+//    while(SysTick->VAL != 0);
+//    start_time = SysTick->VAL;    
+//    MCAN_SetTxBufferConfig(EXAMPLE_MCAN, &txBuffer);
+//    stop_time = SysTick->VAL;
+//    end_time[9] = start_time - stop_time;
+//
+//
+//    SysTick->CTRL = 0;//adfdsf
+//    SysTick->LOAD = 0xFFFFFFFF;
+//    SysTick->VAL = 0;
+//        SysTick->CTRL= 0x5;
+//    while(SysTick->VAL != 0);
+//    start_time = SysTick->VAL;    
+//    MCAN_SetTxBufferConfig(EXAMPLE_MCAN, &txBuffer);
+//    stop_time = SysTick->VAL;
+//    end_time[10] = start_time - stop_time;
+//
+//    SysTick->CTRL = 0;//adfdsf
+//    SysTick->LOAD = 0xFFFFFFFF;
+//    SysTick->VAL = 0;
+//        SysTick->CTRL= 0x5;
+//    while(SysTick->VAL != 0);
+//    start_time = SysTick->VAL;    
+//    MCAN_EnterNormalMode(EXAMPLE_MCAN);
+//    stop_time = SysTick->VAL;
+//    end_time[11] = start_time - stop_time;
+//
+    txXfer.bufferIdx= 63U;
     SysTick->CTRL = 0;//adfdsf
     SysTick->LOAD = 0xFFFFFFFF;
     SysTick->VAL = 0;
-    while(SysTick->VAL != 0);
-    start_time = SysTick->VAL;    
-    MCAN_GetDefaultConfig(&mcanConfig);
-    stop_time = SysTick->VAL;
-    end_time[0] = start_time - stop_time;
-
-    SysTick->CTRL = 0;//adfdsf
-    SysTick->LOAD = 0xFFFFFFFF;
-    SysTick->VAL = 0;
-    while(SysTick->VAL != 0);
-    start_time = SysTick->VAL;    
-    MCAN_FDCalculateImprovedTimingValues(mcanConfig.baudRateA, mcanConfig.baudRateD, MCAN_CLK_FREQ, &timing_config);
-    stop_time = SysTick->VAL;
-    end_time[1] = start_time - stop_time;
-
-    SysTick->CTRL = 0;//adfdsf
-    SysTick->LOAD = 0xFFFFFFFF;
-    SysTick->VAL = 0;
-    while(SysTick->VAL != 0);
-    start_time = SysTick->VAL;    
-    MCAN_Init(EXAMPLE_MCAN, &mcanConfig, MCAN_CLK_FREQ);
-    stop_time = SysTick->VAL;
-    end_time[2] = start_time - stop_time;
-
-    SysTick->CTRL = 0;//adfdsf
-    SysTick->LOAD = 0xFFFFFFFF;
-    SysTick->VAL = 0;
-    while(SysTick->VAL != 0);
-    start_time = SysTick->VAL;    
-    MCAN_TransferCreateHandle(EXAMPLE_MCAN, &mcanHandle, mcan_callback, NULL);
-
-    stop_time = SysTick->VAL;
-    end_time[3] = start_time - stop_time;
-
-    SysTick->CTRL = 0;//adfdsf
-    SysTick->LOAD = 0xFFFFFFFF;
-    SysTick->VAL = 0;
-    while(SysTick->VAL != 0);
-    start_time = SysTick->VAL;
-    MCAN_SetMsgRAMBase(EXAMPLE_MCAN, MSG_RAM_BASE);
-    stop_time = SysTick->VAL;
-    end_time[4] = start_time - stop_time;
-
-    SysTick->CTRL = 0;//adfdsf
-    SysTick->LOAD = 0xFFFFFFFF;
-    SysTick->VAL = 0;
-    while(SysTick->VAL != 0);
-    start_time = SysTick->VAL;    
-    MCAN_SetFilterConfig(EXAMPLE_MCAN, &rxFilter);
-    stop_time = SysTick->VAL;
-    end_time[5] = start_time - stop_time;
-
-    SysTick->CTRL = 0;//adfdsf
-    SysTick->LOAD = 0xFFFFFFFF;
-    SysTick->VAL = 0;
-    while(SysTick->VAL != 0);
-    start_time = SysTick->VAL;    
-    MCAN_SetFilterConfig(EXAMPLE_MCAN, &rxFilter);
-    stop_time = SysTick->VAL;
-    end_time[6] = start_time - stop_time;
-
-    SysTick->CTRL = 0;//adfdsf
-    SysTick->LOAD = 0xFFFFFFFF;
-    SysTick->VAL = 0;
-    while(SysTick->VAL != 0);
-    start_time = SysTick->VAL;    
-    MCAN_SetSTDFilterElement(EXAMPLE_MCAN, &rxFilter, &stdFilter, 0);
-    stop_time = SysTick->VAL;
-    end_time[7] = start_time - stop_time;
-
-    SysTick->CTRL = 0;//adfdsf
-    SysTick->LOAD = 0xFFFFFFFF;
-    SysTick->VAL = 0;
-    while(SysTick->VAL != 0);
-    start_time = SysTick->VAL;    
-    MCAN_SetRxFifo0Config(EXAMPLE_MCAN, &rxFifo0);
-    stop_time = SysTick->VAL;
-    end_time[8] = start_time - stop_time;
-
-    SysTick->CTRL = 0;//adfdsf
-    SysTick->LOAD = 0xFFFFFFFF;
-    SysTick->VAL = 0;
-    while(SysTick->VAL != 0);
-    start_time = SysTick->VAL;    
-    MCAN_SetTxBufferConfig(EXAMPLE_MCAN, &txBuffer);
-    stop_time = SysTick->VAL;
-    end_time[9] = start_time - stop_time;
-
-
-    SysTick->CTRL = 0;//adfdsf
-    SysTick->LOAD = 0xFFFFFFFF;
-    SysTick->VAL = 0;
-    while(SysTick->VAL != 0);
-    start_time = SysTick->VAL;    
-    MCAN_SetTxBufferConfig(EXAMPLE_MCAN, &txBuffer);
-    stop_time = SysTick->VAL;
-    end_time[10] = start_time - stop_time;
-
-    SysTick->CTRL = 0;//adfdsf
-    SysTick->LOAD = 0xFFFFFFFF;
-    SysTick->VAL = 0;
-    while(SysTick->VAL != 0);
-    start_time = SysTick->VAL;    
-    MCAN_EnterNormalMode(EXAMPLE_MCAN);
-    stop_time = SysTick->VAL;
-    end_time[11] = start_time - stop_time;
-
-    SysTick->CTRL = 0;//adfdsf
-    SysTick->LOAD = 0xFFFFFFFF;
-    SysTick->VAL = 0;
+        SysTick->CTRL= 0x5;
     while(SysTick->VAL != 0);
     start_time = SysTick->VAL;    
     MCAN_TransferSendNonBlocking(EXAMPLE_MCAN, &mcanHandle, &txXfer);
     stop_time = SysTick->VAL;
     end_time[12] = start_time - stop_time;
-
-    SysTick->CTRL = 0;//adfdsf
-    SysTick->LOAD = 0xFFFFFFFF;
-    SysTick->VAL = 0;
-    while(SysTick->VAL != 0);
-    start_time = SysTick->VAL;    
-    MCAN_TransferReceiveFifoNonBlocking(EXAMPLE_MCAN, 0, &mcanHandle, &rxXfer);
-    stop_time = SysTick->VAL;
-    end_time[13] = start_time - stop_time;
-
-
-    SysTick->CTRL = 0;//adfdsf
-    SysTick->LOAD = 0xFFFFFFFF;
-    SysTick->VAL = 0;
-    while(SysTick->VAL != 0);
-    start_time = SysTick->VAL;    
-    MCAN_Deinit(EXAMPLE_MCAN);
-
-    stop_time = SysTick->VAL;
-    end_time[14] = start_time - stop_time;
-
-
-    SysTick->CTRL = 0;//adfdsf
-    SysTick->LOAD = 0xFFFFFFFF;
-    SysTick->VAL = 0;
-    while(SysTick->VAL != 0);
-    start_time = SysTick->VAL;    
-    MCAN_SetArbitrationTimingConfig(EXAMPLE_MCAN, &timing_config);
-    stop_time = SysTick->VAL;
-    end_time[15] = start_time - stop_time;
-
-    SysTick->CTRL = 0;//adfdsf
-    SysTick->LOAD = 0xFFFFFFFF;
-    SysTick->VAL = 0;
-    while(SysTick->VAL != 0);
-    start_time = SysTick->VAL;    
-    MCAN_SetDataTimingConfig(EXAMPLE_MCAN, &timing_config);
-    stop_time = SysTick->VAL;
-    end_time[16] = start_time - stop_time;
-
-
-    SysTick->CTRL = 0;//adfdsf
-    SysTick->LOAD = 0xFFFFFFFF;
-    SysTick->VAL = 0;
-    while(SysTick->VAL != 0);
-    start_time = SysTick->VAL;    
-    MCAN_SetRxFifo1Config(EXAMPLE_MCAN, &rxFifo1);
-    stop_time = SysTick->VAL;
-    end_time[17] = start_time - stop_time;
-
-
-    SysTick->CTRL = 0;//adfdsf
-    SysTick->LOAD = 0xFFFFFFFF;
-    SysTick->VAL = 0;
-    while(SysTick->VAL != 0);
-    start_time = SysTick->VAL;    
-    MCAN_SetRxBufferConfig(EXAMPLE_MCAN, &rxBuffer);
-    stop_time = SysTick->VAL;
-    end_time[18] = start_time - stop_time;
-
-
-    SysTick->CTRL = 0;//adfdsf
-    SysTick->LOAD = 0xFFFFFFFF;
-    SysTick->VAL = 0;
-    while(SysTick->VAL != 0);
-    start_time = SysTick->VAL;    
-    MCAN_SetTxEventFifoConfig(EXAMPLE_MCAN, &txFifo0);
-    stop_time = SysTick->VAL;
-    end_time[19] = start_time - stop_time;
-
-
-    SysTick->CTRL = 0;//adfdsf
-    SysTick->LOAD = 0xFFFFFFFF;
-    SysTick->VAL = 0;
-    while(SysTick->VAL != 0);
-    start_time = SysTick->VAL;    
-    MCAN_SetEXTFilterElement(EXAMPLE_MCAN, &rxFilter, &extFilter, 0);
-    stop_time = SysTick->VAL;
-    end_time[20] = start_time - stop_time;
-
-
-    SysTick->CTRL = 0;//adfdsf
-    SysTick->LOAD = 0xFFFFFFFF;
-    SysTick->VAL = 0;
-    while(SysTick->VAL != 0);
-    start_time = SysTick->VAL;    
-    MCAN_IsTransmitRequestPending(EXAMPLE_MCAN, 0);
-    stop_time = SysTick->VAL;
-    end_time[21] = start_time - stop_time;
-
-
-    SysTick->CTRL = 0;//adfdsf
-    SysTick->LOAD = 0xFFFFFFFF;
-    SysTick->VAL = 0;
-    while(SysTick->VAL != 0);
-    start_time = SysTick->VAL;    
-    MCAN_IsTransmitOccurred(EXAMPLE_MCAN, 0);
-    stop_time = SysTick->VAL;
-    end_time[22] = start_time - stop_time;
+//
+//    SysTick->CTRL = 0;//adfdsf
+//    SysTick->LOAD = 0xFFFFFFFF;
+//    SysTick->VAL = 0;
+//        SysTick->CTRL= 0x5;
+//    while(SysTick->VAL != 0);
+//    start_time = SysTick->VAL;    
+//    MCAN_TransferReceiveFifoNonBlocking(EXAMPLE_MCAN, 0, &mcanHandle, &rxXfer);
+//    stop_time = SysTick->VAL;
+//    end_time[13] = start_time - stop_time;
+//
+//
+//    SysTick->CTRL = 0;//adfdsf
+//    SysTick->LOAD = 0xFFFFFFFF;
+//    SysTick->VAL = 0;
+//        SysTick->CTRL= 0x5;
+//    while(SysTick->VAL != 0);
+//    start_time = SysTick->VAL;    
+//    MCAN_Deinit(EXAMPLE_MCAN);
+//
+//    stop_time = SysTick->VAL;
+//    end_time[14] = start_time - stop_time;
+//
+//
+//    SysTick->CTRL = 0;//adfdsf
+//    SysTick->LOAD = 0xFFFFFFFF;
+//    SysTick->VAL = 0;
+//        SysTick->CTRL= 0x5;
+//    while(SysTick->VAL != 0);
+//    start_time = SysTick->VAL;    
+//    MCAN_SetArbitrationTimingConfig(EXAMPLE_MCAN, &timing_config);
+//    stop_time = SysTick->VAL;
+//    end_time[15] = start_time - stop_time;
+//
+//    SysTick->CTRL = 0;//adfdsf
+//    SysTick->LOAD = 0xFFFFFFFF;
+//    SysTick->VAL = 0;
+//        SysTick->CTRL= 0x5;
+//    while(SysTick->VAL != 0);
+//    start_time = SysTick->VAL;    
+//    MCAN_SetDataTimingConfig(EXAMPLE_MCAN, &timing_config);
+//    stop_time = SysTick->VAL;
+//    end_time[16] = start_time - stop_time;
+//
+//
+//    SysTick->CTRL = 0;//adfdsf
+//    SysTick->LOAD = 0xFFFFFFFF;
+//    SysTick->VAL = 0;
+//        SysTick->CTRL= 0x5;
+//    while(SysTick->VAL != 0);
+//    start_time = SysTick->VAL;    
+//    MCAN_SetRxFifo1Config(EXAMPLE_MCAN, &rxFifo1);
+//    stop_time = SysTick->VAL;
+//    end_time[17] = start_time - stop_time;
+//
+//
+//    SysTick->CTRL = 0;//adfdsf
+//    SysTick->LOAD = 0xFFFFFFFF;
+//    SysTick->VAL = 0;
+//        SysTick->CTRL= 0x5;
+//    while(SysTick->VAL != 0);
+//    start_time = SysTick->VAL;    
+//    MCAN_SetRxBufferConfig(EXAMPLE_MCAN, &rxBuffer);
+//    stop_time = SysTick->VAL;
+//    end_time[18] = start_time - stop_time;
+//
+//
+//    SysTick->CTRL = 0;//adfdsf
+//    SysTick->LOAD = 0xFFFFFFFF;
+//    SysTick->VAL = 0;
+//        SysTick->CTRL= 0x5;
+//    while(SysTick->VAL != 0);
+//    start_time = SysTick->VAL;    
+//    MCAN_SetTxEventFifoConfig(EXAMPLE_MCAN, &txFifo0);
+//    stop_time = SysTick->VAL;
+//    end_time[19] = start_time - stop_time;
+//
+//
+//    SysTick->CTRL = 0;//adfdsf
+//    SysTick->LOAD = 0xFFFFFFFF;
+//    SysTick->VAL = 0;
+//        SysTick->CTRL= 0x5;
+//    while(SysTick->VAL != 0);
+//    start_time = SysTick->VAL;    
+//    MCAN_SetEXTFilterElement(EXAMPLE_MCAN, &rxFilter, &extFilter, 0);
+//    stop_time = SysTick->VAL;
+//    end_time[20] = start_time - stop_time;
+//
+//
+//    SysTick->CTRL = 0;//adfdsf
+//    SysTick->LOAD = 0xFFFFFFFF;
+//    SysTick->VAL = 0;
+//        SysTick->CTRL= 0x5;
+//    while(SysTick->VAL != 0);
+//    start_time = SysTick->VAL;    
+//    MCAN_IsTransmitRequestPending(EXAMPLE_MCAN, 0);
+//    stop_time = SysTick->VAL;
+//    end_time[21] = start_time - stop_time;
+//
+//
+//    SysTick->CTRL = 0;//adfdsf
+//    SysTick->LOAD = 0xFFFFFFFF;
+//    SysTick->VAL = 0;
+//        SysTick->CTRL= 0x5;
+//    while(SysTick->VAL != 0);
+//    start_time = SysTick->VAL;    
+//    MCAN_IsTransmitOccurred(EXAMPLE_MCAN, 0);
+//    stop_time = SysTick->VAL;
+//    end_time[22] = start_time - stop_time;
 
     
     uint8_t *pdata, value_data;
@@ -455,61 +479,78 @@ int main(void)
     SysTick->CTRL = 0;//adfdsf
     SysTick->LOAD = 0xFFFFFFFF;
     SysTick->VAL = 0;
+        SysTick->CTRL= 0x5;
     while(SysTick->VAL != 0);
     start_time = SysTick->VAL;    
-    MCAN_WriteTxBuffer(EXAMPLE_MCAN, 0, &pTxFrame);
+    MCAN_WriteTxBuffer(EXAMPLE_MCAN, 10, &pTxFrame);
     stop_time = SysTick->VAL;
     end_time[23] = start_time - stop_time;
 
 
 
-    SysTick->CTRL = 0;//adfdsf
+//    SysTick->CTRL = 0;//adfdsf
+//    SysTick->LOAD = 0xFFFFFFFF;
+//    SysTick->VAL = 0;
+//        SysTick->CTRL= 0x5;
+//    while(SysTick->VAL != 0);
+//    start_time = SysTick->VAL;    
+//    MCAN_ReadRxBuffer(EXAMPLE_MCAN, 0, &pRxFrame);
+//    stop_time = SysTick->VAL;
+//    end_time[24] = start_time - stop_time;
+//
+//
+//
+//    SysTick->CTRL = 0;//adfdsf
+//    SysTick->LOAD = 0xFFFFFFFF;
+//    SysTick->VAL = 0;
+//        SysTick->CTRL= 0x5;
+//    while(SysTick->VAL != 0);
+//    start_time = SysTick->VAL;    
+//    MCAN_ReadRxFifo(EXAMPLE_MCAN, 0, &pRxFrame);
+//    stop_time = SysTick->VAL;
+//    end_time[25] = start_time - stop_time;
+//
+//
+//
+//    SysTick->CTRL = 0;//adfdsf
+//    SysTick->LOAD = 0xFFFFFFFF;
+//    SysTick->VAL = 0;
+//        SysTick->CTRL= 0x5;
+//    while(SysTick->VAL != 0);
+//    start_time = SysTick->VAL;    
+//    MCAN_TransferAbortSend(EXAMPLE_MCAN, &handle, 0);
+//    stop_time = SysTick->VAL;
+//    end_time[26] = start_time - stop_time;
+//
+//    SysTick->CTRL = 0;//adfdsf
+//    SysTick->LOAD = 0xFFFFFFFF;
+//    SysTick->VAL = 0;
+//        SysTick->CTRL= 0x5;
+//    while(SysTick->VAL != 0);
+//    start_time = SysTick->VAL;    
+//    MCAN_TransferAbortReceiveFifo(EXAMPLE_MCAN, 0, &handle);
+//    stop_time = SysTick->VAL;
+//    end_time[27] = start_time - stop_time;
+//
+//    SysTick->CTRL = 0;//adfdsf
+//    SysTick->LOAD = 0xFFFFFFFF;
+//    SysTick->VAL = 0;
+//        SysTick->CTRL= 0x5;
+//    while(SysTick->VAL != 0);
+//    start_time = SysTick->VAL;    
+//    MCAN_TransferHandleIRQ(EXAMPLE_MCAN, &handle);
+//    stop_time = SysTick->VAL;
+//    end_time[28] = start_time - stop_time;
+    
+      
+          SysTick->CTRL = 0;//adfdsf
     SysTick->LOAD = 0xFFFFFFFF;
     SysTick->VAL = 0;
+        SysTick->CTRL= 0x5;
     while(SysTick->VAL != 0);
     start_time = SysTick->VAL;    
-    MCAN_ReadRxBuffer(EXAMPLE_MCAN, 0, &pRxFrame);
+    MCAN_TransferSendBlocking(EXAMPLE_MCAN, 10, &pTxFrame);
     stop_time = SysTick->VAL;
-    end_time[24] = start_time - stop_time;
-
-
-
-    SysTick->CTRL = 0;//adfdsf
-    SysTick->LOAD = 0xFFFFFFFF;
-    SysTick->VAL = 0;
-    while(SysTick->VAL != 0);
-    start_time = SysTick->VAL;    
-    MCAN_ReadRxFifo(EXAMPLE_MCAN, 0, &pRxFrame);
-    stop_time = SysTick->VAL;
-    end_time[25] = start_time - stop_time;
-
-
-
-    SysTick->CTRL = 0;//adfdsf
-    SysTick->LOAD = 0xFFFFFFFF;
-    SysTick->VAL = 0;
-    while(SysTick->VAL != 0);
-    start_time = SysTick->VAL;    
-    MCAN_TransferAbortSend(EXAMPLE_MCAN, &handle, 0);
-    stop_time = SysTick->VAL;
-    end_time[26] = start_time - stop_time;
-
-    SysTick->CTRL = 0;//adfdsf
-    SysTick->LOAD = 0xFFFFFFFF;
-    SysTick->VAL = 0;
-    while(SysTick->VAL != 0);
-    start_time = SysTick->VAL;    
-    MCAN_TransferAbortReceiveFifo(EXAMPLE_MCAN, 0, &handle);
-    stop_time = SysTick->VAL;
-    end_time[27] = start_time - stop_time;
-
-    SysTick->CTRL = 0;//adfdsf
-    SysTick->LOAD = 0xFFFFFFFF;
-    SysTick->VAL = 0;
-    while(SysTick->VAL != 0);
-    start_time = SysTick->VAL;    
-    MCAN_TransferHandleIRQ(EXAMPLE_MCAN, &handle);
-    stop_time = SysTick->VAL;
-    end_time[28] = start_time - stop_time;
+    end_time[29] = start_time - stop_time;
 
 }
