@@ -1,0 +1,19 @@
+optimize none
+INPUTMUX_Init 39
+INPUTMUX_AttachSignal 33
+PINT_Init 369
+PINT_PinInterruptConfig 97
+PINT_EnableCallback 889
+PINT_DisableCallback 930
+PINT_PinInterruptClrStatus 38
+PINT_Deinit 1171
+
+optimize high
+INPUTMUX_Init 16
+INPUTMUX_AttachSignal 13
+PINT_Init 191
+PINT_PinInterruptConfig 68
+PINT_EnableCallback 441
+PINT_DisableCallback 456
+PINT_PinInterruptClrStatus 23
+PINT_Deinit 587
