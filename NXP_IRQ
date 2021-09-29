@@ -17,3 +17,20 @@ PINT_EnableCallback 441
 PINT_DisableCallback 456
 PINT_PinInterruptClrStatus 23
 PINT_Deinit 587
+
+    DMA_Init 274
+  
+    DMA_CreateHandle 285
+    
+    DMA_EnableChannel 48
+    
+    DMA_SetCallback 35
+  
+    DMA_PrepareChannelTransfer 139
+   
+    DMA_SubmitChannelTransfer 338
+    
+    DMA_StartTransfer 101
+    
+    DMA_AbortTransfer 143
+   
